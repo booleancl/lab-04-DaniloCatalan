@@ -45,7 +45,7 @@ describe('02 - Describe Saas book', () => {
 describe('03 - Describe a Constructor function', () => {
   const funBook = new Book('El economista camuflado', 'Tim Hardford')
   const funBookTwo = new Book('Freakonomincs', 'Steven Levitt')
-
+  //console.log(new Book(1,2))
   it('Has a constructor', () => {
     expect(funBookTwo.constructor).toEqual(Book)
   })

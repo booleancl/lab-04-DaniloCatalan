@@ -17,9 +17,11 @@ function Triangle(side, height){
     return this.side * this.height / 2
   };
 }
+// class Triangle extends TwoDShape
+// class TwoDShape extends Shape
 
-TwoDShape.prototype = new Object()
-Triangle.prototype = new Object()
+TwoDShape.prototype = new Shape()
+Triangle.prototype = new TwoDShape()
 
 module.exports = {
   Triangle: Triangle,

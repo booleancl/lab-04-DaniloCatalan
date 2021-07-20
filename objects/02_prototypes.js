@@ -1,33 +1,36 @@
 function prototypes(){
   function Foo(){}
 
-  return Foo.constructor
+  return new Foo()
 }
 
 function Gadget(name, color) {
+  //console.log(this)
   this.name = name
   this.color = color
   this.whatAreYou = function () {
     return 'I am a ' + this.color + ' ' + this.name
   }
 }
-
-// Gadget.prototype.price = 100;
+//Gadget.prototype.price =10
+//var g = new Gadget
+//console.log(g.toString())
+//Gadget.prototype.price = 100;
 // Gadget.prototype.rating = 3;
 // Gadget.prototype.getInfo = function () {
 //   return 'Rating: ' + this.rating + ', price: ' + this.price;
 // };
 
-// Gadget.prototype = {
-//   price: 100,
-//   rating: 3,
-//   getInfo: function () {
-//     return 'Rating: ' + this.rating + ', price: ' + this.price;
-//   },
-//   get: function(property){
-//     return this[property]
-//   } 
-// };
+Gadget.prototype = {
+  price: 100,
+  rating: 3,
+  getInfo: function () {
+    return 'Rating: ' + this.rating + ', price: ' + this.price;
+  },
+  get: function(property){
+    return this[property]
+  } 
+};
 
 module.exports = {
   prototypes: prototypes,
